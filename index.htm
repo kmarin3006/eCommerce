@@ -1,0 +1,60 @@
+<!doctype HTML>
+
+<html>
+    <head>
+        <title> Keivns sweater shop </title>
+    <style>
+        img{
+            width:300px;
+        }
+        input{
+            width:300px;
+        }
+        div{
+            background-color: green;
+            width:300px;
+        }
+    </style>
+<script>
+ 
+    function ProcessOrder(){
+        var build = " ";
+        build += "Customer info";
+        build += "Subtotal: $ " + customerSubtotal;
+        build += "<br>"
+        build += "Tax: $" + tax;
+        build += "<br>"
+        build += "Shipping: $" + ShippingCost;
+        build += "<br>"
+        build += "Total: $" + price;
+        op.innerHTML = build;
+    }
+</script>
+</head>
+<body onload="initPrices()">
+    <h1>kevins sweater shop</h1>
+    <div>
+        <img src="pic1.jpg"><br>
+        <p>$20 </p><br>
+        <span id="span1">  </span>
+        qty:<input type="text" id="qty1" placeholder="number of sweaters">
+    </div>
+    <hr>
+    <div>
+        <img src="pic2.jpeg"><br>
+        <p>$30</p><br>
+        <span id="span2">  </span>
+        qty:<input type="text" id="qty2" placeholder="number of sweaters">
+    </div>
+    <hr>
+    <div>
+        <img src="pic3.png"><br>
+        <p> $15 </p><br>
+        <span id="span3"></span>
+        qty:<input type="text" id="qty3" placeholder="number of sweaters">
+    </div>
+    <button onclick="ProcessOrder()">order</button>
+    <br>
+    <div id="output"></div>
+</body>
+</html
